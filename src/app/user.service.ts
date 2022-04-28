@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
+import {environment} from '../environments/environment'
 @Injectable({
   providedIn: 'root',
 })
@@ -9,7 +10,7 @@ export class UserService {
   currentUserDetail = this.userDetail.asObservable();
 
   constructor(private http: HttpClient) {}
-  URL: string = 'https://jsonplaceholder.typicode.com/users';
+  URL: string = environment.apiEndPoint;
 
   viewUserDetail(data: any) {
     this.userDetail.next(data);
