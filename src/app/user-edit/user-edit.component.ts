@@ -43,7 +43,7 @@ export class UserEditComponent implements OnInit {
       website: this.userDetail.website,
       city: this.userDetail.address.city,
       lat: this.userDetail.address.geo.lat,
-      lng: this.userDetail.address.geo.lat,
+      lng: this.userDetail.address.geo.lng,
       street: this.userDetail.address.street,
       suite: this.userDetail.address.suite,
       zipcode: this.userDetail.address.zipcode,
